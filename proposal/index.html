@@ -67,21 +67,39 @@
 			<section id="data" class="my-5">
 				<h2 class="h5">Data</h2>
 				<hr class="w-25 mb-3" />
-                <p> to answer:  From where and how are you collecting your data? If appropriate, provide a link to your data sources.</p>
 				<ul>
-					<li>Source(s): include links if available.</li>
+					<li>
+					Food Insecurity: 
+					<a href="https://www.fsinplatform.org/report/global-report-food-crises-2025/" target="_blank" rel="noopener noreferrer">
+						Global Report on Food Crises 2025
+					</a>
+					</li>
+					<li>
+					Food Waste: 
+					<a href="https://www.fao.org/platform-food-loss-waste/flw-data/en/" target="_blank" rel="noopener noreferrer">
+						FAO Food Loss & Waste Data
+					</a>
+					</li>
+					<li>
+					Food Production: 
+					<a href="https://www.fao.org/faostat/en/#data/QCL" target="_blank" rel="noopener noreferrer">
+						FAOSTAT Food Production (QCL)
+					</a>
+					</li>
 				</ul>
 			</section>
 
 			<section id="data-processing" class="my-5">
 				<h2 class="h5">Data Processing</h2>
 				<hr class="w-25 mb-3" />
-				<p>to answer: do you expect to do substantial data cleanup? What quantities do you plan to derive from your data? How will data processing be implemented?</p>
+				<p>We do not expect to have a lot of data cleanup since there will be key metrics that we are looking for. This numbers are given in the links from the data section, and we can manually convert them into a readable json file. </p>
+				<p> Key Metrics: 
 				<ul>
-					<li>Expected cleanup: </li>
-					<li>Derived metrics (counts, rates, aggregates, sentiment scores, etc.)</li>
-					<li>Implementation plan: languages, libraries, tools, etc</li>
+					<li>How much food is produced by each continent (For optional feature of breakdown of what the food waste type is (waste by food type))</li>
+					<li>How much food is wasted by each continent </li>
+					<li>Total food insecurity globally (Optional filtering : by continent ) </li>
 				</ul>
+				</p>
 			</section>
 
 			<section id="visualization-design" class="my-5">
@@ -104,7 +122,18 @@
 					<img src="resources/design2.jpg" class="img-fluid w-100">
 				</div>
 					<div class="mt-2 mb-4">
-						<p>pros/cons, details & description</p>
+						<p> A world map where production is shown as a product type appearing in the country it is being produced in. Food insecurity is shown as as the different shades of red. Food waste is shown as an accumulating bar on the side
+                            <ul>
+                                <li>Pros:</li>
+                                <ul>
+                                    <li>Easy to compare how food waste and food insecurity relate </li>
+                                    <li>Geographic context for production and insecurity</li>
+                                </ul>
+                                <li>Cons:</li>
+                                <ul>
+                                    <li>Can be too much cluster</li>
+                            </ul>
+                        </p>
 					</div>
 		    </div>
 				<div class="my-5">
@@ -142,11 +171,14 @@
 				</div>
 			</section>
 
+
 			<section id="must-have" class="my-5">
 				<h2 class="h5">Must-Have Features</h2>
 				<hr class="w-25 mb-3" />
 				<ul>
-					<li>Clear visual representation and quantification of food production vs food waste by region</li>
+					<li>Easy-to-read metrics for total food insecurity, food waste, and food production</li>
+					<li>Display showing how many pounds of food are required to resolve food insecurity</li>
+					<li>Interactive hover tooltip to view metrics by continent</li>
 				</ul>
 			</section>
 
@@ -154,7 +186,11 @@
 				<h2 class="h5">Optional Features</h2>
 				<hr class="w-25 mb-3" />
 				<ul>
-					<li>Animations/transitions</li>
+					<li>Animations or smooth transitions between views</li>
+					<li>Breakdown of food waste by type (to distinguish perishable vs. non-perishable items for distribution feasibility)</li>
+					<li>Bar chart showing suggested consumption of each food type</li>
+					<li>Data filtering options (e.g., filter by production of a specific food type)</li>
+					<li>Food insecurity bar visualization that can toggle between global totals and regional/continent-level breakdowns</li>
 				</ul>
 			</section>
 
